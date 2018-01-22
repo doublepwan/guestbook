@@ -12,7 +12,7 @@
 </head>
 <body>
 	<form action="gc" method="get">
-		<input type="text" name="a" value="insert">
+		<input type="hidden" name="a" value="insert">
 		<table border=1 width=500>
 			<tr>
 				<td>이름</td>

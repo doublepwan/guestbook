@@ -23,7 +23,7 @@ public class GuestBookDAO {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 			// Connection 얻어오기
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 			conn = DriverManager.getConnection(url, "webdb", "webdb");
 
 			// sql문 준비 / 바인딩 / 실행
@@ -43,13 +43,12 @@ public class GuestBookDAO {
 				String content = rs.getString("content");
 
 				dto.setNo(no);
-				
+
 				dto.setName(name);
-				
+
 				dto.setPassword(password);
-				
+
 				dto.setContent(content);
-				
 
 				guestList.add(dto);
 			}
@@ -81,7 +80,7 @@ public class GuestBookDAO {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 			// Connection 얻어오기
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 			conn = DriverManager.getConnection(url, "webdb", "webdb");
 
 			// sql문 준비 / 바인딩 / 실행
@@ -124,7 +123,7 @@ public class GuestBookDAO {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 			// Connection 얻어오기
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 			conn = DriverManager.getConnection(url, "webdb", "webdb");
 
 			// sql문 준비 / 바인딩 / 실행

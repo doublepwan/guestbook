@@ -21,29 +21,32 @@
 	<%
 		for (GuestBookVO vo : list) {
 	%>
-	<table border=1 width=500>
-		<tr>
-			<td>이름</td>
-			<td><input type="text" name="name" value="<%=vo.getName()%>"></td>
-			<td>비밀번호</td>
-			<td><input type="password" name="pass"></td>
-		</tr>
-		<tr>
-			<td colspan=4><textarea name="content" cols=60 rows=5><%=vo.getContent()%></textarea></td>
-		</tr>
+	<form action="gc" method="get">
+		<input type="hidden" name="a" value=delete>
+		<table border=1 width=500>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name" value="<%=vo.getName()%>"></td>
+				<td>비밀번호</td>
+				<td><input type="password" name="pass"></td>
+			</tr>
+			<tr>
+				<td colspan=4><textarea name="content" cols=60 rows=5><%=vo.getContent()%></textarea></td>
+			</tr>
 
-	</table>
+		</table>
 
-	<br />
-	<table width=510 border=1>
-		<tr>
-			<td><a href="gc?a=delete&no=<%=vo.getNo()%>">삭제</a></td>
-		</tr>
-		<tr>
-			<td colspan=4></td>
-		</tr>
-	</table>
-	<br />
+		<br />
+		<table width=510 border=1>
+			<tr>
+				<td><a href="gc?a=deleteform&no=<%=vo.getNo()%>">삭제</a></td>
+			</tr>
+			<tr>
+				<td colspan=4></td>
+			</tr>
+		</table>
+		<br />
+	</form>
 	<%
 		}
 	%>
